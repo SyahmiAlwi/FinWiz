@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, Link, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { supabase } from '../supabaseClient';
 
 const Auth = () => {
@@ -64,7 +64,7 @@ const Auth = () => {
           password,
         });
         if (loginError) throw loginError;
-        navigate('/dashboard');
+        navigate('/explore');
       }
     } catch (err) {
       setError(err.message);

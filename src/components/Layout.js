@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import { Link, useLocation, useNavigate, Outlet } from 'react-router-dom';
 import { supabase } from '../supabaseClient';
-import { HomeIcon, CurrencyDollarIcon, CalculatorIcon, UserIcon, BellIcon, Bars3Icon, ArrowRightStartOnRectangleIcon } from '@heroicons/react/24/outline';
+import { CurrencyDollarIcon, CalculatorIcon, UserIcon, Bars3Icon, ArrowRightStartOnRectangleIcon, GlobeAltIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 
 // Dark mode context
 const DarkModeContext = createContext();
@@ -94,10 +94,19 @@ const Layout = () => {
 
           <nav className="flex-1 mt-6 flex flex-col gap-2">
             <ul className="flex-1 flex flex-col gap-1">
+
+              {/* Explore */}
+              <li className={`flex items-center ${currentPath === '/explore' ? 'bg-[#05A6D4] border-l-4 border-[#0BCDAA]' : 'hover:bg-[#05A6D4]/80'} py-3 px-6 rounded-r-lg transition-all`}>
+                <Link to="/explore" className="flex items-center gap-3 w-full">
+                  <GlobeAltIcon className="h-6 w-6 text-white" />
+                  <span className="font-medium text-lg">Explore</span>
+                </Link>
+              </li>
+
               {/* Dashboard */}
               <li className={`flex items-center ${currentPath === '/dashboard' ? 'bg-[#05A6D4] border-l-4 border-[#0BCDAA]' : 'hover:bg-[#05A6D4]/80'} py-3 px-6 rounded-r-lg transition-all` }>
                 <Link to="/dashboard" className="flex items-center gap-3 w-full">
-                  <HomeIcon className="h-6 w-6 text-white" />
+                  <ChartBarIcon className="h-6 w-6 text-white" />
                   <span className="font-medium text-lg">Dashboard</span>
                 </Link>
               </li>

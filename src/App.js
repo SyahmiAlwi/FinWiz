@@ -10,6 +10,7 @@ import ExtendedProfile from './components/ExtendedProfile';
 import Profile from './components/Profile';
 import { supabase } from './supabaseClient';
 import StudentLoanCalculator from './components/StudentLoanCalculator';
+import Explore from './components/Explore';
 import { AnimatePresence } from 'framer-motion';
 import PageTransition from './components/PageTransition';
 
@@ -42,6 +43,7 @@ const AnimatedRoutes = ({ session, profileCompleted }) => {
             )
           }
         >
+          <Route path="/explore" element={<PageTransition><Explore /></PageTransition>} />
           <Route path="dashboard" element={<PageTransition><Dashboard /></PageTransition>} />
           <Route path="transactions" element={<PageTransition><Transactions /></PageTransition>} />
           <Route path="student-loan-calculator" element={<PageTransition><StudentLoanCalculator /></PageTransition>} />
@@ -54,7 +56,7 @@ const AnimatedRoutes = ({ session, profileCompleted }) => {
           element={
             session ? (
               profileCompleted ? (
-                <Navigate to="/dashboard" replace />
+                <Navigate to="/explore" replace />
               ) : (
                 <PageTransition><ExtendedProfile /></PageTransition>
               )
