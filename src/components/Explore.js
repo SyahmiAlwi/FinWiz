@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { GlobeAltIcon, LinkIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
+import maraLogo from '../assets/images/maralogo.png';
+import ptptnLogo from '../assets/images/ptptnlogo.png';
+import jpaLogo from '../assets/images/jpalogo.png';
 
 // Expanded quiz questions
 const quizQuestions = [
@@ -116,7 +119,7 @@ const Explore = () => {
                 className="p-6 bg-white rounded-lg shadow-xl border-l-4 border-[#0BCDAA] hover:shadow-2xl hover:-translate-y-1 transition relative overflow-hidden"
                 whileHover={{ scale: 1.02 }}>
                 <div className="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-10" style={{ 
-                  backgroundImage: `url(${l.name === 'MARA' ? '/images/maralogo.png' : l.name === 'PTPTN' ? '/images/ptptnlogo.png' : '/images/jpalogo.png'})` 
+                  backgroundImage: `url(${l.name === 'MARA' ? maraLogo : l.name === 'PTPTN' ? ptptnLogo : jpaLogo})` 
                 }}></div>
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold mb-2 flex items-center gap-2">
@@ -145,7 +148,7 @@ const Explore = () => {
             className="p-6 bg-white rounded-lg shadow-xl border-l-4 border-[#0088cc] hover:shadow-2xl hover:-translate-y-1 transition group relative overflow-hidden"
             whileHover={{ scale: 1.02 }}
           >
-            <div className="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-10" style={{ backgroundImage: `url('/images/maralogo.png')` }}></div>
+            <div className="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-10" style={{ backgroundImage: `url(${maraLogo})` }}></div>
             <div className="relative z-10">
               <div className="flex items-center gap-2 mb-3">
                 <svg className="h-6 w-6 text-[#0088cc]" viewBox="0 0 24 24" fill="currentColor">
@@ -170,7 +173,7 @@ const Explore = () => {
             className="p-6 bg-white rounded-lg shadow-xl border-l-4 border-[#0088cc] hover:shadow-2xl hover:-translate-y-1 transition group relative overflow-hidden"
             whileHover={{ scale: 1.02 }}
           >
-            <div className="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-10" style={{ backgroundImage: `url('/images/ptptnlogo.png')` }}></div>
+            <div className="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-10" style={{ backgroundImage: `url(${ptptnLogo})` }}></div>
             <div className="relative z-10">
               <div className="flex items-center gap-2 mb-3">
                 <svg className="h-6 w-6 text-[#0088cc]" viewBox="0 0 24 24" fill="currentColor">
@@ -195,7 +198,7 @@ const Explore = () => {
             className="p-6 bg-white rounded-lg shadow-xl border-l-4 border-[#0088cc] hover:shadow-2xl hover:-translate-y-1 transition group relative overflow-hidden"
             whileHover={{ scale: 1.02 }}
           >
-            <div className="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-10" style={{ backgroundImage: `url('/images/jpalogo.png')` }}></div>
+            <div className="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-10" style={{ backgroundImage: `url(${jpaLogo})` }}></div>
             <div className="relative z-10">
               <div className="flex items-center gap-2 mb-3">
                 <svg className="h-6 w-6 text-[#0088cc]" viewBox="0 0 24 24" fill="currentColor">
